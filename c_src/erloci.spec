@@ -38,15 +38,16 @@ mkdir -p %{buildroot}/usr/local/lib/erlang/lib/%{name}-%{version}
 cp -r ebin priv %{buildroot}/usr/local/lib/erlang/lib/%{name}-%{version}
 
 %files
+%define dir /usr/local/lib/erlang/lib
 %defattr(-,root,root,-)
-/usr/local/lib/erlang/lib/erloci-0.0.2/ebin/erloci.app
-/usr/local/lib/erlang/lib/erloci-0.0.2/ebin/oci_app.beam
-/usr/local/lib/erlang/lib/erloci-0.0.2/ebin/oci_logger.beam
-/usr/local/lib/erlang/lib/erloci-0.0.2/ebin/oci_port.beam
-/usr/local/lib/erlang/lib/erloci-0.0.2/ebin/oci_util.beam
-/usr/local/lib/erlang/lib/erloci-0.0.2/priv/README
-/usr/local/lib/erlang/lib/erloci-0.0.2/priv/liberloci.a
-/usr/local/lib/erlang/lib/erloci-0.0.2/priv/ocierl
+%{dir}/erloci-0.0.2/ebin/erloci.app
+%{dir}/erloci-0.0.2/ebin/oci_app.beam
+%{dir}/erloci-0.0.2/ebin/oci_logger.beam
+%{dir}/erloci-0.0.2/ebin/oci_port.beam
+%{dir}/erloci-0.0.2/ebin/oci_util.beam
+%{dir}/erloci-0.0.2/priv/README
+%{dir}/erloci-0.0.2/priv/liberloci.a
+%{dir}/erloci-0.0.2/priv/ocierl
 
 %changelog
 
